@@ -1,12 +1,13 @@
-package main.java.dao;
+package dao;
 
-import main.java.dm.DataModel;
+
+import dm.DataModel;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyDMFileImpl implements IDao {
+public class MyDMFileImpl implements main.java.dao.IDao {
 
     private String pathFile;
 
