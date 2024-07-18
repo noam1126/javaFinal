@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class BasedRecommender implements IAlgoMachineLearning {
+public class BasedRecommender implements main.java.IAlgoMachineLearning {
 
     private Map<Integer, String> items;
     private Map<Integer, Map<Integer, Double>> itemVectors;
