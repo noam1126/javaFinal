@@ -1,0 +1,5 @@
+rootProject.name = 'recBooksProject'
+
+include ':AlgorithmModule'
+project(':AlgorithmModule').projectDir = new File(settingsDir, '../AlgorithmModule')
+
