@@ -32,7 +32,7 @@ public class HandleRequest implements Runnable {
             if (controller != null) {
                 response = controller.handleRequest(request);
             } else {
-                response = new Response("error", "No controller found for action: " + action);
+                response = new Response("error", "No controller found for: " + action);
             }
 
             out.println(gson.toJson(response));

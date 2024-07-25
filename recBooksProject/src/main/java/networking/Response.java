@@ -4,7 +4,6 @@ public class Response {
     private String status;
     private String message;
 
-    // Constructors, getters, and setters
     public Response() {}
 
     public Response(String status, String message) {

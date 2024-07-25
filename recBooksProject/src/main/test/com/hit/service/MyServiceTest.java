@@ -18,13 +18,13 @@ public class MyServiceTest {
 
     @BeforeEach
     public void setUp() {
-        dao = new MyDMFileImpl("test_data.txt"); // Use a test file path for testing
+        dao = new MyDMFileImpl("test_data.txt");
         service = new BookService(dao);
     }
 
     @Test
     public void testSaveAndGetById() {
-        DataModel dataModel = new DataModel(1, "Test Data");
+        DataModel dataModel = new DataModel(1, "Test num 1");
         service.saveDataModel(dataModel);
 
         DataModel retrievedModel = service.getDataModelById(1);
@@ -35,10 +35,10 @@ public class MyServiceTest {
 
     @Test
     public void testUpdate() {
-        DataModel dataModel = new DataModel(2, "Test Data 2");
+        DataModel dataModel = new DataModel(2, "Test num 2");
         service.saveDataModel(dataModel);
 
-        DataModel updatedModel = new DataModel(2, "Updated Test Data 2");
+        DataModel updatedModel = new DataModel(2, "Updated Test num 2");
         service.updateDataModel(updatedModel);
 
         DataModel retrievedModel = service.getDataModelById(2);
@@ -47,7 +47,7 @@ public class MyServiceTest {
 
     @Test
     public void testDelete() {
-        DataModel dataModel = new DataModel(3, "Test Data 3");
+        DataModel dataModel = new DataModel(3, "Test num 3");
         service.saveDataModel(dataModel);
 
         service.deleteDataModel(3);
