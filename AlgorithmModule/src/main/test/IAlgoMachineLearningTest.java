@@ -25,17 +25,17 @@ public class IAlgoMachineLearningTest {
     @Test
     public void testContentBasedRecommenderTrainAndRecommend() {
         Map<Integer, String> items = new HashMap<>();
-        items.put(1, "apple banana orange");
-        items.put(2, "banana orange fruit");
-        items.put(3, "carrot vegetable");
+        items.put(1, "one two three");
+        items.put(2, "two one three");
+        items.put(3, "three two one");
 
         contentBasedRecommender.train(items);
 
         List<String> recommendations = contentBasedRecommender.recommend(1, 2);
         assertNotNull(recommendations);
         assertEquals(2, recommendations.size());
-        assertTrue(recommendations.contains("banana orange fruit"));
-        assertFalse(recommendations.contains("carrot vegetable"));
+        assertTrue(recommendations.contains("two one three"));
+        assertFalse(recommendations.contains("three two one"));
     }
 
     @Test
@@ -59,8 +59,8 @@ public class IAlgoMachineLearningTest {
         List<String> recommendations = basedCollaborativeFiltering.recommend(1, 2);
         assertNotNull(recommendations);
         assertEquals(2, recommendations.size());
-        assertTrue(recommendations.contains("3")); // assuming item 3 is recommended
-        assertFalse(recommendations.contains("1")); // item 1 should not be recommended to user 1
+        assertTrue(recommendations.contains("3"));
+        assertFalse(recommendations.contains("1"));
     }
 
     @Test

@@ -34,28 +34,21 @@ public class ClientHandler implements Runnable {
             }
             String jsonRequest = sb.toString();
 
-            // Deserialize JSON request into Request object
             Request request = gson.fromJson(jsonRequest, Request.class);
 
-            // Get action from request
             String action = request.getAction();
 
-            // Find the corresponding controller for the action
             Controller controller = controllerMap.get(action);
             if (controller != null) {
-                // Handle request using the controller
                 Response response = controller.handleRequest(request);
 
-                // Serialize response to JSON
                 String jsonResponse = gson.toJson(response);
 
-                // Send response back to client
                 writer.write(jsonResponse);
                 writer.newLine();
                 writer.flush();
             } else {
-                // Handle if no controller found for the action
-                Response response = new Response("error", "No controller found for action: " + action);
+                Response response = new Response("error", "No controller found for: " + action);
                 String jsonResponse = gson.toJson(response);
                 writer.write(jsonResponse);
                 writer.newLine();

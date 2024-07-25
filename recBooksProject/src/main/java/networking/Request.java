@@ -6,7 +6,6 @@ public class Request {
     private String action;
     private DataModel data;
 
-    // Constructors, getters, and setters
     public Request() {}
 
     public Request(String action, DataModel data) {

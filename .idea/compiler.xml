@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="AlgorithmModule.recBooksProject" target="21" />
+      <module name="com.example.recBooksProject" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

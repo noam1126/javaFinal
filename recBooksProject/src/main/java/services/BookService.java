@@ -3,7 +3,6 @@ package services;
 import dm.DataModel;
 import dao.IDao;
 import main.java.BasedRecommender;
-
 import java.util.List;
 
 public class BookService {
