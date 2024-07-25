@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.clientapp.HelloApplicationController">
+
+  <TextField fx:id="nameField" promptText="Name"/>
+  <TextField fx:id="descriptionField" promptText="Description"/>
+  <TextField fx:id="authorField" promptText="Author"/>
+  <TextField fx:id="yearField" promptText="Year"/>
+
+  <Button text="Save" onAction="#onSaveButtonClick"/>
+
+  <ListView fx:id="bookListView"/>
+
+  <HBox>
+    <Button text="Update" onAction="#onUpdateButtonClick"/>
+    <Button text="Remove" onAction="#onRemoveButtonClick"/>
+  </HBox>
+
+</VBox>
